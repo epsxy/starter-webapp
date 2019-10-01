@@ -1,0 +1,39 @@
+language: node_js
+node_js:
+  - "10"
+dist: alpine
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+    - packages/client/node_modules
+    - packages/server/node_modules
+
+addons:
+  chrome: stable
+
+script:
+  - npm install
+  - npm run lint
+  - npm run test
+  - npm run build
+  - npm run e2e
+
+jobs:
+  include:
+    - stage: client
+      script:
+        - yarn workspace client install
+        - yarn workspace client lint
+        # FIXME: Run karma tests in CI
+        # - yarn workspace client test
+        - yarn workspace client build
+        # FIXME: Run e2e tests in CI
+        # - yarn workspace client e2e
+    - stage: server
+      script:
+        - yarn workspace server install
+        - yarn workspace server lint
+        - yarn workspace server test
+        - yarn workspace server build
