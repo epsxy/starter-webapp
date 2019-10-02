@@ -4,9 +4,19 @@
   "devDependencies": {
     "lerna": "^3.16.4"
   },
-  "workspaces": [
-    "packages/*"
-  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/@types/jasmine",
+      "**/@types/jasmine/**",
+      "**/@types/jasminewd2",
+      "**/@types/jasminewd2/**",
+      "**/@types/jest",
+      "**/@types/jest/**"
+    ]
+  },
   "version": "1.0.0",
   "repository": "git@github.com:epsxy/starter-webapp.git",
   "author": "epsxy <epsxy@users.noreply.github.com>",
