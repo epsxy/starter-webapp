@@ -2,7 +2,7 @@
 
 Blank webapp project
 
-## Todo
+## To Do
 
 - [ ] Add Client
 - [ ] Add Server
