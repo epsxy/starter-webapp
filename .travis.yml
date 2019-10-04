@@ -16,9 +16,9 @@ addons:
 script:
   - npm install
   - npm run lint
-  - npm run test
+  - npm run test:ci
   - npm run build
-  - npm run e2e
+  - npm run e2e:ci
 
 jobs:
   include:
@@ -26,11 +26,9 @@ jobs:
       script:
         - yarn workspace client install
         - yarn workspace client lint
-        # FIXME: Run karma tests in CI
-        # - yarn workspace client test
+        - yarn workspace client test
         - yarn workspace client build
-        # FIXME: Run e2e tests in CI
-        # - yarn workspace client e2e
+        - yarn workspace client e2e
     - stage: server
       script:
         - yarn workspace server install
