@@ -6,3 +6,7 @@ clean:
 
 init:
 	yarn
+
+build:
+	yarn workspace client run build
+	yarn workspace server run build
