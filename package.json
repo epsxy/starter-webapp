@@ -4,6 +4,11 @@
   "devDependencies": {
     "lerna": "^3.16.4"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
   "workspaces": {
     "packages": [
       "packages/*"

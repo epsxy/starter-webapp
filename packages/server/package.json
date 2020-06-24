@@ -1,12 +1,6 @@
 {
   "name": "server",
   "version": "0.0.1",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && tslint -p tsconfig.json -c tslint.json && jest",
-      "pre-push": "nest build"
-    }
-  },
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",

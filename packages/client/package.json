@@ -1,12 +1,6 @@
 {
   "name": "client",
   "version": "0.0.0",
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged && ng lint && ng test",
-      "pre-push": "ng build --aot true"
-    }
-  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
