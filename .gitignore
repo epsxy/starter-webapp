@@ -223,4 +223,6 @@ fabric.properties
 .idea/**/markdown-navigator.xml
 .idea/**/markdown-navigator/
 
+# Python
+**/__pycache__/**
 # End of https://www.gitignore.io/api/node,angular,webstorm,visualstudiocode
