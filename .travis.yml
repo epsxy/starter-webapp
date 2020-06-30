@@ -22,13 +22,13 @@ script:
 
 jobs:
   include:
-    - stage: client
-      script:
-        - yarn workspace client install
-        - yarn workspace client lint
-        - yarn workspace client test:ci
-        - yarn workspace client build
-        - yarn workspace client e2e:ci
+#    - stage: client
+#      script:
+#        - yarn workspace client install
+#        - yarn workspace client lint
+#        - yarn workspace client test:ci
+#        - yarn workspace client build
+#        - yarn workspace client e2e:ci
     - stage: server
       script:
         - yarn workspace server install
