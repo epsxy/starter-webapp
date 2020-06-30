@@ -1,0 +1,28 @@
+<app-new-work></app-new-work>
+
+<mat-card *ngFor="let work of works">
+    <mat-card-content>
+        <div>
+            <div>
+                <mat-card-title>{{ work.name }}</mat-card-title>
+                <mat-card-subtitle>
+                    {{ work.description }}
+                </mat-card-subtitle>
+            </div>
+            <div>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                    <mat-icon>play_arrow</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                    <mat-icon>pause</mat-icon>
+                </button>
+                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                    <mat-icon>stop</mat-icon>
+                </button>
+            </div>
+            <div>
+                <mat-progress-bar mode="determinate" value="{{ work.progress }}"></mat-progress-bar>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

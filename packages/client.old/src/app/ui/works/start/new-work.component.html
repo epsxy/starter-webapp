@@ -1,0 +1,10 @@
+<div class="startWork__container">
+    <mat-form-field class="startWork__form">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text" [(ngModel)]="value" />
+        <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value = ''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+    <button mat-raised-button class="startWork__validate" color="primary">Add work</button>
+</div>
