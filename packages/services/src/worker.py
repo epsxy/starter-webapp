@@ -4,14 +4,14 @@ class Worker:
     id = None
     time = 10
 
-    def __init__(self, id, time):
+    def __init__(self, id: str, time: int):
         self.id = id
         self.time = time
 
     def _fire_progress(self, progress):
         print('{}% completed'.format(progress))
 
-    def work(self):
+    def work(self) -> str:
         threshold = self.time/100
         i = 0
         while i<100:
