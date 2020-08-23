@@ -1,9 +1,13 @@
-<title></title>
-<h1 class="root__title">Hellow</h1>
-<nav>
-    <ul>
-        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/works" routerLinkActive="active">Works list</a></li>
-    </ul>
-</nav>
-<router-outlet></router-outlet>
+<header class="header">
+    <nav class="navbar">
+        <div class="navbar--start">
+            <a routerLink="/" routerLinkActive="active" class="mat-subheading-2">Home</a>
+        </div>
+        <div class="navbar--content">
+            <a routerLink="/works" routerLinkActive="active" class="mat-subheading-2">Works list</a>
+        </div>
+    </nav>
+</header>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

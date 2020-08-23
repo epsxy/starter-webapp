@@ -1,4 +1,9 @@
-<app-new-work></app-new-work>
+<button mat-raised-button class="startWork__formBtn" color="primary" (click)="createWork()" *ngIf="!isCreatingNewWork">
+    <mat-icon>create</mat-icon> Create work
+</button>
+
+<app-new-work [enable]="isCreatingNewWork" (cancelEvent)="onCreateWorkCancel()"></app-new-work>
+
 <mat-card *ngFor="let work of works" class="worksList__card">
     <mat-card-content>
         <div>
@@ -15,8 +20,11 @@
                 <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
                     <mat-icon>pause</mat-icon>
                 </button>
-                <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+                <button mat-icon-button color="warn" aria-label="Example icon button with a home icon">
                     <mat-icon>stop</mat-icon>
+                </button>
+                <button mat-icon-button color="warn" aria-label="Example icon button with a home icon">
+                    <mat-icon>delete</mat-icon>
                 </button>
             </div>
             <div>

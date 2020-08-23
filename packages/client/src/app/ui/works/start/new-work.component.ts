@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-new-work',
@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NewWorkComponent {
     value = '';
+    types = [{ name: 'Dummy', value: 'dummy' }];
+
+    @Input('enable') enable = false;
+    @Output() cancelEvent = new EventEmitter();
+
     constructor() {}
+
+    onCancel(): void {
+        this.cancelEvent.emit();
+    }
 }

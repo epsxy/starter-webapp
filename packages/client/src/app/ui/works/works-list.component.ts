@@ -12,6 +12,15 @@ export class WorksListComponent {
         { id: 3, name: 'My Third Work', description: 'lorem ipsum', progress: 20 },
         { id: 4, name: 'My Fourth Work', description: 'lorem ipsum', progress: 95 },
     ];
+    isCreatingNewWork = false;
 
     constructor() {}
+
+    createWork(): void {
+        this.isCreatingNewWork = true;
+    }
+
+    onCreateWorkCancel(): void {
+        this.isCreatingNewWork = false;
+    }
 }
