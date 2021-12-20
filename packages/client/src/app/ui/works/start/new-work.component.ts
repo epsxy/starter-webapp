@@ -1,7 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'app-new-work',
+    selector: 'app-new-todo',
     templateUrl: 'new-work.component.html',
     styleUrls: ['new-work.component.sass'],
 })

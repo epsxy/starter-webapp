@@ -2,7 +2,7 @@
     <mat-icon>create</mat-icon> Create work
 </button>
 
-<app-new-work [enable]="isCreatingNewWork" (cancelEvent)="onCreateWorkCancel()"></app-new-work>
+<app-new-todo [enable]="isCreatingNewWork" (cancelEvent)="onCreateWorkCancel()"></app-new-todo>
 
 <mat-card *ngFor="let work of works" class="worksList__card">
     <mat-card-content>
